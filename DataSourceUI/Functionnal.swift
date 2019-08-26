@@ -37,11 +37,11 @@ public extension DeclarativeCompatible {
 
 extension Array: DeclarativeCompatible { }
 public extension Declarative where Base: Collection {
-    func map<T: Content>(_ builder: @escaping (Base.Element) -> T) -> Map<Base, T> {
+    func map<T: Content>(@ContentBuilder _ builder: @escaping (Base.Element) -> T) -> Map<Base, T> {
         return Map(self.base, builder)
     }
     
-    func compactMap<T: Content>(_ builder: @escaping (Base.Element) -> T?) -> CompactMap<Base, T> {
+    func compactMap<@ContentBuilder T: Content>(_ builder: @escaping (Base.Element) -> T?) -> CompactMap<Base, T> {
         return CompactMap(self.base, builder)
     }
     
@@ -53,7 +53,7 @@ public extension Declarative where Base: Collection {
 public struct Map<Data: Collection, T: Content>: Content {
     var data: Data
     var builder: (Data.Element) -> T
-    public init(_ data: Data, _ builder: @escaping (Data.Element) -> T) {
+    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> T) {
         self.data = data
         self.builder = builder
     }
@@ -67,7 +67,7 @@ public struct Map<Data: Collection, T: Content>: Content {
 public struct CompactMap<Data: Collection, T: Content>: Content {
     var data: Data
     var builder: (Data.Element) -> T?
-    public init(_ data: Data, _ builder: @escaping (Data.Element) -> T?) {
+    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> T?) {
         self.data = data
         self.builder = builder
     }
@@ -75,6 +75,23 @@ public struct CompactMap<Data: Collection, T: Content>: Content {
         return data.compactMap {
             builder($0)
         }
+    }
+}
+
+public struct IfLet<T: OptionalType>: Content {
+    let data: T
+    let builder: (T.Wrapped) -> Content
+
+    public init(_ data: T, @ContentBuilder _ builder: @escaping (T.Wrapped) -> Content) {
+        self.data = data
+        self.builder = builder
+    }
+    
+    public var contents: [Content]? {
+        guard let value = data.value else {
+            return nil
+        }
+        return [builder(value)]
     }
 }
 
@@ -90,23 +107,6 @@ public struct ForEach<Data: Collection>: Content {
             builder($0)
         }
         return nil
-    }
-}
-
-public struct IfLet<T: OptionalType>: Content {
-    let data: T
-    let builder: (T.Wrapped) -> Content
-    
-    public init(_ data: T, @ContentBuilder builder: @escaping (T.Wrapped) -> Content) {
-        self.data = data
-        self.builder = builder
-    }
-    
-    public var contents: [Content]? {
-        guard let value = data.value else {
-            return nil
-        }
-        return [builder(value)]
     }
 }
 
@@ -126,9 +126,9 @@ extension Optional: OptionalType {
     }
 }
 
-//extension Optional: DeclarativeCompatible { }
-//public extension Declarative where Base: OptionalType {
-//    func iflet<T: Content>(@ContentBuilder _ builder: @escaping (Base.Wrapped) -> [T]) -> IfLet<Base, T> {
-//        return IfLet(self.base, builder: builder)
-//    }
-//}
+extension Optional: DeclarativeCompatible { }
+public extension Declarative where Base: OptionalType {
+    func iflet(@ContentBuilder _ builder: @escaping (Base.Wrapped) -> Content) -> IfLet<Base> {
+        return IfLet(self.base, builder)
+    }
+}

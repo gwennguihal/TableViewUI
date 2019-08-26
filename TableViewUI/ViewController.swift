@@ -17,19 +17,18 @@ class ViewController: UIViewController {
         
         self.model.sections.ui.map { section in
             AnySection {
+                
+                SpacerCell()
                 LabelCell(adapter: TitleAdapter(label: section.title))
-//                section.subTitle.ui.iflet { subTitle -> Content in
-//                    Container {
-//                        LineCell()
-//                        LabelCell(adapter: SubtitleAdapter(label: subTitle))
-//                        LineCell()
-//                    }
-//                }
-                IfLet(section.subTitle) { subtitle in
+                
+                section.subTitle.ui.iflet {
+                    SpacerCell()
                     LineCell()
+                    LabelCell(adapter: SubtitleAdapter(label: $0))
                 }
-                section.colors.ui.map { color in
-                    ContentCell(adapter: ContentAdapter(color: color))
+                SpacerCell()
+                section.colors.ui.map {
+                    ContentCell(adapter: ContentAdapter(color: $0))
                 }
             }
         }

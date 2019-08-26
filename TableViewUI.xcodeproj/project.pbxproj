@@ -28,6 +28,7 @@
 		F05DE844230D2ED400F9B65C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05DE843230D2ED400F9B65C /* Model.swift */; };
 		F05DE846230D369A00F9B65C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05DE845230D369A00F9B65C /* UI.swift */; };
 		F0669500230FD0BD003DAEA4 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06694FF230FD0BD003DAEA4 /* LineCell.swift */; };
+		F06695022313C64A003DAEA4 /* SpacerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06695012313C64A003DAEA4 /* SpacerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		F05DE843230D2ED400F9B65C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F05DE845230D369A00F9B65C /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		F06694FF230FD0BD003DAEA4 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
+		F06695012313C64A003DAEA4 /* SpacerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				F05DE83F230D232F00F9B65C /* LabelCell.swift */,
 				F05DE841230D235A00F9B65C /* ContentCell.swift */,
 				F06694FF230FD0BD003DAEA4 /* LineCell.swift */,
+				F06695012313C64A003DAEA4 /* SpacerCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05DE844230D2ED400F9B65C /* Model.swift in Sources */,
+				F06695022313C64A003DAEA4 /* SpacerCell.swift in Sources */,
 				F05DE7F2230D1F6D00F9B65C /* ViewController.swift in Sources */,
 				F05DE7EE230D1F6D00F9B65C /* AppDelegate.swift in Sources */,
 				F05DE840230D232F00F9B65C /* LabelCell.swift in Sources */,

@@ -12,13 +12,11 @@ struct Model {
     struct Section {
         var title: String
         var subTitle: String?
-        var state: Bool
         var colors: [Int]
     }
     
     let blue = Section(title: "Blue",
                                subTitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                               state: true,
                                colors: [0x31e5f2,
                                         0x3bd4e1,
                                         0x46c3d1,
@@ -28,7 +26,6 @@ struct Model {
     
     let purple = Section(title: "Purple",
                          subTitle: nil,
-                         state: false,
                          colors: [0x86548d,
                                   0x904b87,
                                   0x9a4281,
@@ -42,7 +39,6 @@ struct Model {
     
     let green = Section(title: "Green",
                         subTitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                        state: true,
                         colors: [0x5abd9d,
                                  0x64b491,
                                  0x6eab86,
