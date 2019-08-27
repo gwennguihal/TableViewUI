@@ -13,9 +13,14 @@ protocol LabelAdapter: Adapter {
     var label: NSAttributedString { get }
 }
 
-struct LabelCell: Cell {
+class LabelCell: Cell {
+    let adapterType: Any.Type = LabelAdapter.self
     var identifier: String = "UILabelCell"
     var adapter: LabelAdapter
+    
+    init(_ adapter: LabelAdapter) {
+        self.adapter = adapter
+    }
     
     func getAdapter() -> Adapter {
         return adapter

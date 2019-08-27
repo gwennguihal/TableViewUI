@@ -17,7 +17,7 @@ struct SpacerAdapter: Adapter {
     }
 }
 
-struct SpacerCell: Cell {
+class SpacerCell: Cell {
     let identifier: String = "UISpacerCell"
     let adapter: SpacerAdapter
     
@@ -40,7 +40,7 @@ class UISpacerCell: UITableViewCell, UICell {
             fatalError()
         }
         heightConstraint.constant = adapter.value
-        layoutIfNeeded()
+        setNeedsLayout()
         
     }
 

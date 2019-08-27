@@ -17,7 +17,7 @@ struct LineAdapter: Adapter {
     }
 }
 
-struct LineCell: Cell {
+class LineCell: Cell {
     let identifier: String = "UILineCell"
     var adapter: LineAdapter
     

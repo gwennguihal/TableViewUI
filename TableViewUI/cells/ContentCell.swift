@@ -13,9 +13,13 @@ struct ContentAdapter: Adapter {
     public let color: Int
 }
 
-struct ContentCell: Cell {
+class ContentCell: Cell {
     var identifier: String = "UIContentCell"
     var adapter: ContentAdapter
+    
+    init(_ adapter: ContentAdapter) {
+        self.adapter = adapter
+    }
     
     func getAdapter() -> Adapter {
         return adapter

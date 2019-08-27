@@ -11,36 +11,37 @@ import DataSourceUI
 
 class ViewController: UIViewController {
 
-    var model = Model()
+    let model = Model()
     
     lazy var dataSource = DataSource {
         
-        self.model.sections.ui.map { section in
+        model.sections.ui.map { section in
             AnySection {
                 
                 SpacerCell()
-                LabelCell(adapter: TitleAdapter(label: section.title))
+                LabelCell(TitleAdapter(label: section.title))
                 
-                section.subTitle.ui.iflet {
+                section.subTitle.ui.map {
                     SpacerCell()
                     LineCell()
-                    LabelCell(adapter: SubtitleAdapter(label: $0))
+                    LabelCell(SubtitleAdapter(label: $0))
                 }
                 SpacerCell()
                 section.colors.ui.map {
-                    ContentCell(adapter: ContentAdapter(color: $0))
+                    ContentCell(ContentAdapter(color: $0))
+                        .onDidSelect { print($0.adapter.color) }
                 }
+                SpacerCell(16)
             }
         }
     }
     
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = dataSource
+        tableView.ui.dataSource = dataSource
     }
-
-
 }
 

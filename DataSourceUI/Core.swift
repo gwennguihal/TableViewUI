@@ -25,17 +25,6 @@ public struct ContentBuilder {
     }
 }
 
-public protocol Adapter {}
-
-public protocol UICell: UITableViewCell {
-    func update(adapter: Adapter)
-}
-
-public protocol Cell: Content {
-    var identifier: String { get }
-    func getAdapter() -> Adapter
-}
-
 public struct Container: Content {
     public var contents: [Content]?
     init(contents: [Content]) {

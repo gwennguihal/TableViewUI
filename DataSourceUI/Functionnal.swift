@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Declarative<Base> {
     public let base: Base
@@ -128,7 +129,28 @@ extension Optional: OptionalType {
 
 extension Optional: DeclarativeCompatible { }
 public extension Declarative where Base: OptionalType {
-    func iflet(@ContentBuilder _ builder: @escaping (Base.Wrapped) -> Content) -> IfLet<Base> {
+    func map(@ContentBuilder _ builder: @escaping (Base.Wrapped) -> Content) -> IfLet<Base> {
         return IfLet(self.base, builder)
     }
 }
+
+//MARK: UITableView
+
+extension UITableView: DeclarativeCompatible { }
+public extension Declarative where Base: UITableView {
+//    func dataSource(_ dataSource: DataSource) {
+//        self.base.dataSource = dataSource
+//        self.base.delegate = dataSource
+//    }
+    var dataSource: DataSource? {
+        set {
+            self.base.dataSource = newValue
+            self.base.delegate = newValue
+        }
+        get {
+            return self.base.dataSource as? DataSource
+        }
+    }
+}
+
+

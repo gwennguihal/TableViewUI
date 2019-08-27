@@ -28,6 +28,14 @@ public class DataSource: NSObject, UITableViewDataSource {
         return uiCell
     }
 }
+extension DataSource: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = sections[indexPath.section].cells[indexPath.item] else {
+            return
+        }
+        cell.execOnDidSelect()
+    }
+}
 
 public extension DataSource {
     convenience init(@ContentBuilder _ builder: () -> Content) {

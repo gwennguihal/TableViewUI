@@ -21,24 +21,24 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UISpacerCell" id="tm1-f1-sI9" customClass="UISpacerCell" customModule="TableViewUI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="1"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="8"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tm1-f1-sI9" id="SQS-Uu-5gg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWm-wu-gzp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="lM4-5c-3kH"/>
+                                                        <constraint firstAttribute="height" constant="8" id="lM4-5c-3kH"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WWm-wu-gzp" secondAttribute="trailing" id="0M2-mN-JlO"/>
-                                                <constraint firstItem="WWm-wu-gzp" firstAttribute="leading" secondItem="SQS-Uu-5gg" secondAttribute="leading" id="AVp-2d-YI8"/>
-                                                <constraint firstItem="WWm-wu-gzp" firstAttribute="top" secondItem="SQS-Uu-5gg" secondAttribute="top" id="HRS-1d-CeN"/>
-                                                <constraint firstAttribute="bottom" secondItem="WWm-wu-gzp" secondAttribute="bottom" id="PRc-UR-wEm"/>
+                                                <constraint firstAttribute="trailing" secondItem="WWm-wu-gzp" secondAttribute="trailing" priority="750" id="0M2-mN-JlO"/>
+                                                <constraint firstItem="WWm-wu-gzp" firstAttribute="leading" secondItem="SQS-Uu-5gg" secondAttribute="leading" priority="750" id="AVp-2d-YI8"/>
+                                                <constraint firstItem="WWm-wu-gzp" firstAttribute="top" secondItem="SQS-Uu-5gg" secondAttribute="top" priority="750" id="HRS-1d-CeN"/>
+                                                <constraint firstAttribute="bottom" secondItem="WWm-wu-gzp" secondAttribute="bottom" priority="750" id="PRc-UR-wEm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UILabelCell" id="aZ1-WO-vlR" customClass="UILabelCell" customModule="TableViewUI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36" width="414" height="20.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aZ1-WO-vlR" id="rMy-Wp-KFa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UIContentCell" id="O1a-qD-qJe" customClass="UIContentCell" customModule="TableViewUI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="56.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O1a-qD-qJe" id="Izy-IC-5Cy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -100,7 +100,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UILineCell" id="Uxh-1N-8Gu" customClass="UILineCell" customModule="TableViewUI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="109.5" width="414" height="5"/>
+                                        <rect key="frame" x="0.0" y="116.5" width="414" height="5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uxh-1N-8Gu" id="eld-8g-Oht">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>

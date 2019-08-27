@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Model {
+class Model {
     struct Section {
         var title: String
         var subTitle: String?
