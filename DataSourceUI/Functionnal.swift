@@ -38,11 +38,11 @@ public extension DeclarativeCompatible {
 
 extension Array: DeclarativeCompatible { }
 public extension Declarative where Base: Collection {
-    func map<T: Content>(@ContentBuilder _ builder: @escaping (Base.Element) -> T) -> Map<Base, T> {
+    func map(@ContentBuilder _ builder: @escaping (Base.Element) -> Content) -> Map<Base> {
         return Map(self.base, builder)
     }
     
-    func compactMap<@ContentBuilder T: Content>(_ builder: @escaping (Base.Element) -> T?) -> CompactMap<Base, T> {
+    func compactMap(@ContentBuilder _ builder: @escaping (Base.Element) -> Content?) -> CompactMap<Base> {
         return CompactMap(self.base, builder)
     }
     
@@ -51,10 +51,10 @@ public extension Declarative where Base: Collection {
     }
 }
 
-public struct Map<Data: Collection, T: Content>: Content {
+public struct Map<Data: Collection>: Content {
     var data: Data
-    var builder: (Data.Element) -> T
-    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> T) {
+    var builder: (Data.Element) -> Content
+    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> Content) {
         self.data = data
         self.builder = builder
     }
@@ -65,10 +65,10 @@ public struct Map<Data: Collection, T: Content>: Content {
     }
 }
 
-public struct CompactMap<Data: Collection, T: Content>: Content {
+public struct CompactMap<Data: Collection>: Content {
     var data: Data
-    var builder: (Data.Element) -> T?
-    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> T?) {
+    var builder: (Data.Element) -> Content?
+    public init(_ data: Data, @ContentBuilder _ builder: @escaping (Data.Element) -> Content?) {
         self.data = data
         self.builder = builder
     }
@@ -138,10 +138,6 @@ public extension Declarative where Base: OptionalType {
 
 extension UITableView: DeclarativeCompatible { }
 public extension Declarative where Base: UITableView {
-//    func dataSource(_ dataSource: DataSource) {
-//        self.base.dataSource = dataSource
-//        self.base.delegate = dataSource
-//    }
     var dataSource: DataSource? {
         set {
             self.base.dataSource = newValue

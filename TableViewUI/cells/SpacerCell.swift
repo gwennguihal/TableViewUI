@@ -17,7 +17,7 @@ struct SpacerAdapter: Adapter {
     }
 }
 
-class SpacerCell: Cell {
+class Spacer: Cell {
     let identifier: String = "UISpacerCell"
     let adapter: SpacerAdapter
     
@@ -31,7 +31,7 @@ class SpacerCell: Cell {
 }
 
 class UISpacerCell: UITableViewCell, UICell {
-
+    
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var view: UIView!
     

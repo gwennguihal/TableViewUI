@@ -14,7 +14,6 @@ protocol LabelAdapter: Adapter {
 }
 
 class LabelCell: Cell {
-    let adapterType: Any.Type = LabelAdapter.self
     var identifier: String = "UILabelCell"
     var adapter: LabelAdapter
     

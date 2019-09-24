@@ -126,6 +126,42 @@
                                             <outlet property="view" destination="6Ay-Ap-upF" id="vda-Mj-hDl"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UISwitchCell" id="hpS-E7-GFd" customClass="UISwitchCell" customModule="TableViewUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="121.5" width="414" height="39"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hpS-E7-GFd" id="XiD-pl-cH1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-Fo-ZnK">
+                                                    <rect key="frame" x="8" y="9" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-Ax-S6l">
+                                                    <rect key="frame" x="353" y="4" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onValueChanged:" destination="hpS-E7-GFd" eventType="valueChanged" id="HzS-LF-Ica"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="W2a-Ax-S6l" firstAttribute="centerY" secondItem="XiD-pl-cH1" secondAttribute="centerY" id="37T-Cp-da2"/>
+                                                <constraint firstItem="djw-Fo-ZnK" firstAttribute="centerY" secondItem="XiD-pl-cH1" secondAttribute="centerY" id="GTv-Rv-me2"/>
+                                                <constraint firstItem="W2a-Ax-S6l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="djw-Fo-ZnK" secondAttribute="trailing" constant="8" id="SFV-LY-rvC"/>
+                                                <constraint firstAttribute="trailing" secondItem="W2a-Ax-S6l" secondAttribute="trailing" constant="12" id="UWY-CP-ULK"/>
+                                                <constraint firstAttribute="bottom" secondItem="W2a-Ax-S6l" secondAttribute="bottom" constant="4" id="X3E-yQ-m3t"/>
+                                                <constraint firstItem="djw-Fo-ZnK" firstAttribute="leading" secondItem="XiD-pl-cH1" secondAttribute="leading" constant="8" id="b0I-MR-uFk"/>
+                                                <constraint firstItem="W2a-Ax-S6l" firstAttribute="top" secondItem="XiD-pl-cH1" secondAttribute="top" constant="4" id="vUl-mL-eGt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="label" destination="djw-Fo-ZnK" id="vSc-mZ-opc"/>
+                                            <outlet property="toggle" destination="37T-Cp-da2" id="Sn0-oR-lIB"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

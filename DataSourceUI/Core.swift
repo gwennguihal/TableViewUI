@@ -27,11 +27,14 @@ public struct ContentBuilder {
 
 public struct Container: Content {
     public var contents: [Content]?
-    init(contents: [Content]) {
+    public init(contents: [Content] = []) {
+        print("init")
         self.contents = contents
     }
-    public init(@ContentBuilder _ builder: () -> [Content]) {
-        self.init(contents: builder())
+}
+extension Container {
+    public init(@ContentBuilder _ builder: () -> Content) {
+        self.init(contents: builder().contents ?? [])
     }
 }
 

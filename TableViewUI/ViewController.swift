@@ -14,24 +14,25 @@ class ViewController: UIViewController {
     let model = Model()
     
     lazy var dataSource = DataSource {
-        
-        model.sections.ui.map { section in
-            AnySection {
+
+        model.items.ui.map { item in
+            Section {
                 
-                SpacerCell()
-                LabelCell(TitleAdapter(label: section.title))
+                Spacer()
+                LabelCell(TitleAdapter(label: item.title))
                 
-                section.subTitle.ui.map {
-                    SpacerCell()
+                item.subTitle.ui.map {
+                    Spacer()
                     LineCell()
                     LabelCell(SubtitleAdapter(label: $0))
+                        .onDidSelect(self.onDidSelect(subtitleCell:))
                 }
-                SpacerCell()
-                section.colors.ui.map {
+                Spacer()
+                item.colors.ui.map {
                     ContentCell(ContentAdapter(color: $0))
                         .onDidSelect { print($0.adapter.color) }
                 }
-                SpacerCell(16)
+                Spacer(16)
             }
         }
     }
@@ -42,6 +43,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.ui.dataSource = dataSource
+        
+        let container = Container {
+            Container {
+                Container()
+            }
+            Container {
+                Container {
+                    Container()
+                    Container()
+                }
+            }
+        }
+        
+        print(container)
+    }
+}
+
+extension ViewController {
+    func onDidSelect(subtitleCell: LabelCell) {
+        print(subtitleCell.adapter.label.string)
     }
 }
 

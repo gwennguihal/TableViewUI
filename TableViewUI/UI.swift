@@ -10,10 +10,6 @@ import Foundation
 import DataSourceUI
 import UIKit
 
-struct AnySection: Section {
-    var cells: [Int : Cell]
-}
-
 struct TitleAdapter: LabelAdapter {
     var label: NSAttributedString
     init(label: String) {

@@ -1,12 +1,8 @@
 import Foundation
 
-public protocol Section: Content {
-    var cells: [Int: Cell] { get }
-    init(cells: [Int: Cell])
-}
-
-public extension Section {
-    var contents: [Content]? {
+public struct Section: Content {
+    var cells: [Int : Cell]
+    public var contents: [Content]? {
         return [self]
     }
 }

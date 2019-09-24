@@ -40,7 +40,22 @@ extension DataSource: UITableViewDelegate {
 public extension DataSource {
     convenience init(@ContentBuilder _ builder: () -> Content) {
         self.init()
-        self.sections = builder().contents?.compactMap { $0 as? Section } ?? []
+        var sections = [Section]()
+        Self.invalidate(contents: builder().contents ?? [], sections: &sections)
+        self.sections = sections
+    }
+    
+    private static func invalidate(contents: [Content], sections: inout [Section]) {
+        contents.forEach { content in
+            switch (content, content.contents) {
+            case (let section as Section, _):
+                sections.append(section)
+            case (_, .some(let contents)):
+                invalidate(contents: contents, sections: &sections)
+            default:
+                break
+            }
+        }
     }
 }
 
