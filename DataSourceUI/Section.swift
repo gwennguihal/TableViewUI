@@ -2,9 +2,6 @@ import Foundation
 
 public struct Section: Content {
     var cells: [Int : Cell]
-    public var contents: [Content]? {
-        return [self]
-    }
 }
 
 public extension Section {

@@ -1,10 +1,11 @@
 import Foundation
 import UIKit
 
-public class DataSource: NSObject, UITableViewDataSource {
-    
+public class DataSource: NSObject {
     public var sections = [Section]()
-    
+}
+
+extension DataSource: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -28,6 +29,7 @@ public class DataSource: NSObject, UITableViewDataSource {
         return uiCell
     }
 }
+
 extension DataSource: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = sections[indexPath.section].cells[indexPath.item] else {
@@ -41,7 +43,7 @@ public extension DataSource {
     convenience init(@ContentBuilder _ builder: () -> Content) {
         self.init()
         var sections = [Section]()
-        Self.invalidate(contents: builder().contents ?? [], sections: &sections)
+        Self.invalidate(contents: [builder()], sections: &sections)
         self.sections = sections
     }
     
