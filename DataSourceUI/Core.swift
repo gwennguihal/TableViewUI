@@ -28,7 +28,6 @@ public struct ContentBuilder {
 public struct Container: Content {
     public var contents: [Content]?
     public init(contents: [Content] = []) {
-        print("init")
         self.contents = contents
     }
 }

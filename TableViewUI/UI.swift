@@ -10,6 +10,15 @@ import Foundation
 import DataSourceUI
 import UIKit
 
+struct HeaderAdapter: LabelAdapter {
+    var label: NSAttributedString
+    init(label: String) {
+        self.label = NSAttributedString(string: label,
+                                        attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 48, weight: .bold),
+                                                     NSAttributedString.Key.foregroundColor: UIColor.white])
+    }
+}
+
 struct TitleAdapter: LabelAdapter {
     var label: NSAttributedString
     init(label: String) {
