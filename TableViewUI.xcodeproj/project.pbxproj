@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1AAE1AE54955473AEF8C12E /* Pods_TableViewUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2D8AEEC9E3B09BFC0CE6AF /* Pods_TableViewUIUITests.framework */; };
 		F04E4D772314EEF500CA762B /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04E4D762314EEF500CA762B /* Delegate.swift */; };
 		F04E4D792314FE6D00CA762B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04E4D782314FE6D00CA762B /* Cell.swift */; };
 		F05DE7EE230D1F6D00F9B65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05DE7ED230D1F6D00F9B65C /* AppDelegate.swift */; };
@@ -31,6 +32,11 @@
 		F05DE846230D369A00F9B65C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05DE845230D369A00F9B65C /* UI.swift */; };
 		F0669500230FD0BD003DAEA4 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06694FF230FD0BD003DAEA4 /* LineCell.swift */; };
 		F06695022313C64A003DAEA4 /* SpacerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06695012313C64A003DAEA4 /* SpacerCell.swift */; };
+		F0DB6ECA2405AE5E0014E3EE /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC3792405A150002D1A87 /* BaseTest.swift */; };
+		F0DB6ECB2405AE750014E3EE /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC37724059940002D1A87 /* XCUIElement+Extensions.swift */; };
+		F0DB6ECC2405AE7C0014E3EE /* OneUITests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC372240597D4002D1A87 /* OneUITests.generated.swift */; };
+		F0DB6ECD2405AE830014E3EE /* TowUITests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC373240597D4002D1A87 /* TowUITests.generated.swift */; };
+		F0DB6ED624086A9B0014E3EE /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DB6ECF24066A9F0014E3EE /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,13 @@
 			remoteGlobalIDString = F05DE813230D218400F9B65C;
 			remoteInfo = DataSourceUI;
 		};
+		F0DB6EC52405AE460014E3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F05DE7E2230D1F6D00F9B65C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F05DE7E9230D1F6D00F9B65C;
+			remoteInfo = TableViewUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +92,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A2D8AEEC9E3B09BFC0CE6AF /* Pods_TableViewUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF08489CEF6CB58548AE852 /* Pods-TableViewUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-TableViewUIUITests/Pods-TableViewUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0957945F68D7A82B1AB6D31 /* Pods-TableViewUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewUIUITests.release.xcconfig"; path = "Target Support Files/Pods-TableViewUIUITests/Pods-TableViewUIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F03EC372240597D4002D1A87 /* OneUITests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneUITests.generated.swift; sourceTree = "<group>"; };
+		F03EC373240597D4002D1A87 /* TowUITests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowUITests.generated.swift; sourceTree = "<group>"; };
+		F03EC37724059940002D1A87 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
+		F03EC3792405A150002D1A87 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		F04E4D762314EEF500CA762B /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		F04E4D782314FE6D00CA762B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F05DE7EA230D1F6D00F9B65C /* TableViewUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +128,11 @@
 		F05DE845230D369A00F9B65C /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		F06694FF230FD0BD003DAEA4 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
 		F06695012313C64A003DAEA4 /* SpacerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerCell.swift; sourceTree = "<group>"; };
+		F0DB6EC02405AE460014E3EE /* TableViewUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0DB6EC42405AE460014E3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0DB6ECF24066A9F0014E3EE /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		F0DB6ED824086BC00014E3EE /* one.feature */ = {isa = PBXFileReference; lastKnownFileType = text; path = one.feature; sourceTree = "<group>"; };
+		F0DB6ED924086BC00014E3EE /* tow.feature */ = {isa = PBXFileReference; lastKnownFileType = text; path = tow.feature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +166,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0DB6EBD2405AE460014E3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1AAE1AE54955473AEF8C12E /* Pods_TableViewUIUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D707698AC0F5C979321654DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D8AEEC9E3B09BFC0CE6AF /* Pods_TableViewUIUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F03EC371240597D4002D1A87 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				F03EC372240597D4002D1A87 /* OneUITests.generated.swift */,
+				F03EC373240597D4002D1A87 /* TowUITests.generated.swift */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
 		F05DE7E1230D1F6D00F9B65C = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +201,10 @@
 				F05DE803230D1F6F00F9B65C /* TableViewUITests */,
 				F05DE815230D218400F9B65C /* DataSourceUI */,
 				F05DE822230D218400F9B65C /* DataSourceUITests */,
+				F0DB6EC12405AE460014E3EE /* TableViewUIUITests */,
 				F05DE7EB230D1F6D00F9B65C /* Products */,
+				F2CB23E3006B583A133D1D5B /* Pods */,
+				D707698AC0F5C979321654DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +215,7 @@
 				F05DE800230D1F6F00F9B65C /* TableViewUITests.xctest */,
 				F05DE814230D218400F9B65C /* DataSourceUI.framework */,
 				F05DE81C230D218400F9B65C /* DataSourceUITests.xctest */,
+				F0DB6EC02405AE460014E3EE /* TableViewUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +279,45 @@
 				F06695012313C64A003DAEA4 /* SpacerCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		F0DB6EC12405AE460014E3EE /* TableViewUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0DB6ED724086BC00014E3EE /* scenari */,
+				F03EC37724059940002D1A87 /* XCUIElement+Extensions.swift */,
+				F0DB6ECE24066A8E0014E3EE /* pages */,
+				F03EC371240597D4002D1A87 /* features */,
+				F03EC3792405A150002D1A87 /* BaseTest.swift */,
+				F0DB6EC42405AE460014E3EE /* Info.plist */,
+			);
+			path = TableViewUIUITests;
+			sourceTree = "<group>";
+		};
+		F0DB6ECE24066A8E0014E3EE /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				F0DB6ECF24066A9F0014E3EE /* HomePage.swift */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		F0DB6ED724086BC00014E3EE /* scenari */ = {
+			isa = PBXGroup;
+			children = (
+				F0DB6ED824086BC00014E3EE /* one.feature */,
+				F0DB6ED924086BC00014E3EE /* tow.feature */,
+			);
+			path = scenari;
+			sourceTree = SOURCE_ROOT;
+		};
+		F2CB23E3006B583A133D1D5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DF08489CEF6CB58548AE852 /* Pods-TableViewUIUITests.debug.xcconfig */,
+				A0957945F68D7A82B1AB6D31 /* Pods-TableViewUIUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +408,26 @@
 			productReference = F05DE81C230D218400F9B65C /* DataSourceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F0DB6EBF2405AE460014E3EE /* TableViewUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0DB6EC72405AE460014E3EE /* Build configuration list for PBXNativeTarget "TableViewUIUITests" */;
+			buildPhases = (
+				E1282456542BD18B29E439F4 /* [CP] Check Pods Manifest.lock */,
+				F0DB6EBC2405AE460014E3EE /* Sources */,
+				F0DB6EBD2405AE460014E3EE /* Frameworks */,
+				F0DB6EBE2405AE460014E3EE /* Resources */,
+				D39F3F9B070D55EC8B57A833 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0DB6EC62405AE460014E3EE /* PBXTargetDependency */,
+			);
+			name = TableViewUIUITests;
+			productName = TableViewUIUITests;
+			productReference = F0DB6EC02405AE460014E3EE /* TableViewUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -340,6 +453,10 @@
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = F05DE7E9230D1F6D00F9B65C;
 					};
+					F0DB6EBF2405AE460014E3EE = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = F05DE7E9230D1F6D00F9B65C;
+					};
 				};
 			};
 			buildConfigurationList = F05DE7E5230D1F6D00F9B65C /* Build configuration list for PBXProject "TableViewUI" */;
@@ -359,6 +476,7 @@
 				F05DE7FF230D1F6F00F9B65C /* TableViewUITests */,
 				F05DE813230D218400F9B65C /* DataSourceUI */,
 				F05DE81B230D218400F9B65C /* DataSourceUITests */,
+				F0DB6EBF2405AE460014E3EE /* TableViewUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -395,7 +513,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0DB6EBE2405AE460014E3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D39F3F9B070D55EC8B57A833 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewUIUITests/Pods-TableViewUIUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewUIUITests/Pods-TableViewUIUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TableViewUIUITests/Pods-TableViewUIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1282456542BD18B29E439F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableViewUIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F05DE7E6230D1F6D00F9B65C /* Sources */ = {
@@ -443,6 +610,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0DB6EBC2405AE460014E3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DB6ECA2405AE5E0014E3EE /* BaseTest.swift in Sources */,
+				F0DB6ED624086A9B0014E3EE /* HomePage.swift in Sources */,
+				F0DB6ECC2405AE7C0014E3EE /* OneUITests.generated.swift in Sources */,
+				F0DB6ECD2405AE830014E3EE /* TowUITests.generated.swift in Sources */,
+				F0DB6ECB2405AE750014E3EE /* XCUIElement+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -465,6 +644,11 @@
 			isa = PBXTargetDependency;
 			target = F05DE813230D218400F9B65C /* DataSourceUI */;
 			targetProxy = F05DE827230D218400F9B65C /* PBXContainerItemProxy */;
+		};
+		F0DB6EC62405AE460014E3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F05DE7E9230D1F6D00F9B65C /* TableViewUI */;
+			targetProxy = F0DB6EC52405AE460014E3EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -644,7 +828,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TableViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -664,7 +847,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TableViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -775,6 +957,44 @@
 			};
 			name = Release;
 		};
+		F0DB6EC82405AE460014E3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DF08489CEF6CB58548AE852 /* Pods-TableViewUIUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TableViewUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sncf.oui.TableViewUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewUI;
+			};
+			name = Debug;
+		};
+		F0DB6EC92405AE460014E3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0957945F68D7A82B1AB6D31 /* Pods-TableViewUIUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TableViewUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sncf.oui.TableViewUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewUI;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -819,6 +1039,15 @@
 			buildConfigurations = (
 				F05DE830230D218400F9B65C /* Debug */,
 				F05DE831230D218400F9B65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0DB6EC72405AE460014E3EE /* Build configuration list for PBXNativeTarget "TableViewUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0DB6EC82405AE460014E3EE /* Debug */,
+				F0DB6EC92405AE460014E3EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

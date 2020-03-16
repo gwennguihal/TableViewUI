@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import TableViewUI
 
 class TableViewUITests: XCTestCase {
 

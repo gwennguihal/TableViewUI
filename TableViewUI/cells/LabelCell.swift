@@ -34,6 +34,7 @@ class UILabelCell: UITableViewCell, UICell {
             fatalError()
         }
         label.attributedText = adapter.label
+        accessibilityLabel = adapter.label.string
         
     }
 }

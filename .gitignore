@@ -66,3 +66,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+Pods/
+TableViewUI.xcodeproj/xcuserdata/
+TableViewUI.xcodeproj/xcuserdata
+TableViewUI.xcodeproj/xcuserdata/gwenn_guihal.xcuserdatad/xcschemes/xcschememanagement.plist
